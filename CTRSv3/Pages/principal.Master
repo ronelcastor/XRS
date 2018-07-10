@@ -53,7 +53,7 @@
 	  <div class="main_container">
 		<div class="col-md-3 left_col">
 		  <div class="left_col scroll-view">
-			<img src="production/images/Xerox-logo.png" alt="..." style="height: 90px" />
+			<img src="../production/images/Xerox-logo.png" alt="..." style="height: 90px" />
 			<div class="navbar nav_title" style="border: 0;">
 			  <%--<img src="production/images/Xerox-logo.png" alt="..." class="img-circle profile_img">--%>                
 			  <a href="index.html" class="site_title">
@@ -66,7 +66,7 @@
 			<!-- menu profile quick info -->
 			<div class="profile clearfix">
 			  <div class="profile_pic">
-				<img src="production/images/img.jpg" alt="..." class="img-circle profile_img">
+				<img src="../production/images/img.jpg" alt="..." class="img-circle profile_img">
 			  </div>
 			  <div class="profile_info">
 				<span>Welcome,</span>
