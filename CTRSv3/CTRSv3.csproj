@@ -3588,33 +3588,35 @@
     <Content Include="vendors\validator\multifield.js" />
     <Content Include="vendors\validator\validator.js" />
     <Content Include="Web.config" />
-    <Content Include="index..aspx" />
-    <Content Include="cashTaxReport.aspx" />
+    <Content Include="Pages\index..aspx" />
+    <Content Include="Pages\cashTaxReport.aspx" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="principal.Master.cs">
+    <Compile Include="Models\BusinessLayer.cs" />
+    <Compile Include="Models\DataAccess.cs" />
+    <Compile Include="Pages\principal.Master.cs">
       <DependentUpon>principal.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="principal.Master.designer.cs">
+    <Compile Include="Pages\principal.Master.designer.cs">
       <DependentUpon>principal.Master</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="index..aspx.cs">
+    <Compile Include="Pages\index..aspx.cs">
       <DependentUpon>index..aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="index..aspx.designer.cs">
+    <Compile Include="Pages\index..aspx.designer.cs">
       <DependentUpon>index..aspx</DependentUpon>
     </Compile>
-    <Compile Include="cashTaxReport.aspx.cs">
+    <Compile Include="Pages\cashTaxReport.aspx.cs">
       <DependentUpon>cashTaxReport.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="cashTaxReport.aspx.designer.cs">
+    <Compile Include="Pages\cashTaxReport.aspx.designer.cs">
       <DependentUpon>cashTaxReport.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
@@ -4482,7 +4484,7 @@
     <Content Include="vendors\validator\.bower.json" />
     <Content Include="vendors\validator\README.md" />
     <Content Include="vendors\validator\validator.jquery.json" />
-    <Content Include="principal.Master" />
+    <Content Include="Pages\principal.Master" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -4492,7 +4494,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
     <TypeScriptCompile Include="vendors\devbridge-autocomplete\src\jquery.autocomplete.d.ts" />
