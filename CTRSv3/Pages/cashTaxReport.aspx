@@ -1,5 +1,6 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/principal.Master" AutoEventWireup="true" CodeBehind="cashTaxReport.aspx.cs" Inherits="CTRSv3.WebForm2" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Pages/principal.Master" AutoEventWireup="true" CodeBehind="cashTaxReport.aspx.cs" Inherits="CTRSv3.WebFormCashTaxReport" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+	<form id="form1" runat="server">
 	<div class="">
 		<div class="page-title">
 			<div class="title_left">
@@ -21,7 +22,7 @@
 			<div class="col-md-12 col-sm-12 col-xs-12">
 				<div class="x_panel">
 					<div class="x_title">
-					<h2>Report Filtering <small>different form elements</small></h2>
+					<h2>Report Filtering</h2>
 					<ul class="nav navbar-right panel_toolbox">
 						<li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
 						</li>
@@ -32,63 +33,30 @@
 					</div>
 					<div class="x_content">
 					<br />
-						<form id="demo-form2" data-parsley-validate class="form-horizontal form-label-left">
-							<div class="form-group">
-								<label class="control-label col-md-2 left" style="text-align: left;" for="first-name">Region <span class="required">*</span>
-								</label>
-								<div class="col-md-3">
-									<select id="region" class="form-control" required>
-										<option value="">Choose..</option>
-										<option value="press">Press</option>
-										<option value="net">Internet</option>
-										<option value="mouth">Word of mouth</option>
-									</select>
-								</div>
-								<label class="control-label col-md-2 left" style="text-align: left;" for="last-name">Period Date <span class="required">*</span>
-								</label>
-								<div class="col-md-3">
-									<select id="periodDate" class="form-control" required>
-										<option value="">Choose..</option>
-										<option value="press">Press</option>
-										<option value="net">Internet</option>
-										<option value="mouth">Word of mouth</option>
-									</select>
-								</div>
-								<div class="col-md-2">
-									<button type="submit" class="btn btn-success">Submit</button>
-								</div>
+					<div class="form-group">
+						<label class="control-label col-md-2 left" style="text-align: left;" for="first-name">Region <span class="required">*</span>
+						</label>
+						<div class="col-md-3">
+							<asp:DropDownList ID="ddlRegion" runat="server" class="form-control" >
+							</asp:DropDownList>
+							&nbsp;</div>
+						<label class="control-label col-md-2 left" style="text-align: left;" for="last-name">Period Date <span class="required">*</span>
+						</label>
+						<div class="col-md-3">
+							<asp:DropDownList ID="ddlPeriod" runat="server" class="form-control" DataTextFormatString="{0:MM/dd/yyyy}">
+							</asp:DropDownList>
 							</div>
-						</form>
+						<div class="col-md-2">
+							<asp:Button ID="btnSubmit" runat="server" Text="Submit" class="btn btn-success"/>
+						</div>
+					</div>
 					</div>
 				</div>
 			</div>
 
 			<div class="col-md-12 col-sm-12 col-xs-12">
 				<div class="x_panel">
-				  <div class="x_title">
-					<h2>Responsive example<small>Users</small></h2>
-					<ul class="nav navbar-right panel_toolbox">
-					  <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
-					  </li>
-					  <li class="dropdown">
-						<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-wrench"></i></a>
-						<ul class="dropdown-menu" role="menu">
-						  <li><a href="#">Settings 1</a>
-						  </li>
-						  <li><a href="#">Settings 2</a>
-						  </li>
-						</ul>
-					  </li>
-					  <li><a class="close-link"><i class="fa fa-close"></i></a>
-					  </li>
-					</ul>
-					<div class="clearfix"></div>
-				  </div>
 				  <div class="x_content">
-					<p class="text-muted font-13 m-b-30">
-					  Responsive is an extension for DataTables that resolves that problem by optimising the table's layout for different screen sizes through the dynamic insertion and removal of columns from the table.
-					</p>
-					
 					<table id="datatable-responsive" class="table table-striped table-bordered dt-responsive nowrap" cellspacing="0" width="100%">
 					  <thead>
 						<tr>
@@ -741,4 +709,5 @@
 		</div>
 		
 	</div>
+	</form>
 </asp:Content>

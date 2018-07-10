@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/principal.Master" AutoEventWireup="true" CodeBehind="index..aspx.cs" Inherits="CTRSv3.WebForm1" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Pages/principal.Master" AutoEventWireup="true" CodeBehind="index..aspx.cs" Inherits="CTRSv3.WebFormIndex" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <div class="row tile_count">
     <div class="col-md-2 col-sm-4 col-xs-6 tile_stats_count">
@@ -8,7 +8,7 @@
     </div>
     <div class="col-md-2 col-sm-4 col-xs-6 tile_stats_count">
         <span class="count_top"><i class="fa fa-clock-o"></i> Average Time</span>
-        <div class="count">123.50</div>
+        <div class="count">456.50</div>
         <span class="count_bottom"><i class="green"><i class="fa fa-sort-asc"></i>3% </i> From last Week</span>
     </div>
     <div class="col-md-2 col-sm-4 col-xs-6 tile_stats_count">
