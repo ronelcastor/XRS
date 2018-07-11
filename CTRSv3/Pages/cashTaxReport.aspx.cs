@@ -13,8 +13,12 @@ namespace CTRSv3
         Methods method = new Methods();
         protected void Page_Load(object sender, EventArgs e)
         {
-            method.loadRegion(this.ddlRegion);
-            method.loadPeriodDate(this.ddlPeriod);
+            if (!IsPostBack)
+            {
+                method.loadRegion(this.ddlRegion);
+                method.loadPeriodDate(this.ddlPeriod);
+                method.loadTemplate(this.ddlTemplate, this.ddlTemplate.SelectedValue);
+            }
         }
     }
 }

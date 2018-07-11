@@ -29,5 +29,14 @@ namespace BusinessLayer
             control.DataValueField = "Period";
             control.DataBind();
         }
+        public void loadTemplate(DropDownList control, string Region)
+        {
+            control.Items.Clear();
+
+            control.DataSource = FillDataTable("SELECT DISTINCT Template FROM [TDW].[dbo].[Cash Entry] WHERE [REGION] = '" + Region + "' ORDER BY Template", CommandType.Text);
+            control.DataTextField = "Template";
+            control.DataValueField = "Template";
+            control.DataBind();
+        }
     }
 }
