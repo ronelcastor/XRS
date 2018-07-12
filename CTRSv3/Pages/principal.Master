@@ -313,6 +313,9 @@
         <div class="right_col" role="main">
 	        <asp:ContentPlaceHolder ID="head" runat="server">
 
+	            <p>
+                    hello</p>
+
 	        </asp:ContentPlaceHolder>
         </div>
         <!-- /page content -->
