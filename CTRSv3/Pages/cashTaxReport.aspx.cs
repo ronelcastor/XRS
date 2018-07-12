@@ -17,8 +17,13 @@ namespace CTRSv3
             {
                 method.loadRegion(this.ddlRegion);
                 method.loadPeriodDate(this.ddlPeriod);
-                method.loadTemplate(this.ddlTemplate, this.ddlTemplate.SelectedValue);
+
             }
+        }
+
+        protected void ddlRegion_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            method.loadTemplate(this.ddlTemplate, this.ddlRegion.SelectedValue);
         }
     }
 }

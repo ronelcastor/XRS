@@ -39,7 +39,7 @@
 									    <label class="control-label col-md-1 left" style="text-align: left;" for="first-name">Region <span class="required">*</span>
 									    </label>
 									    <div class="col-md-3">
-										    <asp:DropDownList ID="ddlRegion" runat="server" class="form-control" AutoPostBack="True" >
+										    <asp:DropDownList ID="ddlRegion" runat="server" class="form-control" AutoPostBack="True" OnSelectedIndexChanged="ddlRegion_SelectedIndexChanged" >
 										    </asp:DropDownList>
 										    &nbsp;</div>
 									    <label class="control-label col-md-1 left" style="text-align: left;" for="last-name">Period Date <span class="required">*</span>
@@ -204,7 +204,7 @@
 					
 					
 							  </div>
-								<asp:ListView ID="ListView1" runat="server" DataSourceID="sdsReport">
+								<asp:ListView ID="lvReport" runat="server" DataSourceID="sdsReport">
 									<EmptyDataTemplate>
 										<table runat="server" class="table table-striped table-bordered dt-responsive nowrap" cellspacing="0" width="100%">
 											<tr>
