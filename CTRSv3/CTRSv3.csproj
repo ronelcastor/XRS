@@ -116,6 +116,8 @@
     <Content Include="Global.asax" />
     <Content Include="gulpfile.js" />
     <Content Include="LICENSE.txt" />
+    <Content Include="Pages\Loader.html" />
+    <Content Include="Pages\PageLoader.aspx" />
     <Content Include="production\calendar.html" />
     <Content Include="production\chartjs.html" />
     <Content Include="production\chartjs2.html" />
@@ -3615,6 +3617,13 @@
     </Compile>
     <Compile Include="Pages\principal.Master.designer.cs">
       <DependentUpon>principal.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\PageLoader.aspx.cs">
+      <DependentUpon>PageLoader.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\PageLoader.aspx.designer.cs">
+      <DependentUpon>PageLoader.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Pages\index..aspx.cs">

@@ -1,0 +1,32 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script type="text/javascript">
+        function setUrl(url, target) {
+            clearTimeout(window.ht);
+            window.ht = setTimeout(function () {
+                var div = document.getElementById(target);
+                div.innerHTML = '<iframe style="width:100%;height:100%;" frameborder="1" src="' + url + '" />';
+            }, 50);
+        }
+    </script>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div>
+            <a href="#" onclick="setUrl('https://xcsspi.payroll.ph/','div1')">Xerox Payroll</a>
+            <!--<br />
+            <a href="#" onclick="setUrl('http://www.yahoo.com','div1')">AspSnippets</a>-->
+            <br />
+            <br />
+            <br />
+            <div>
+                <div id="div1" style="width: 500px; height: 300px; border: 1px solid #ddd;">
+                </div>
+            </div>
+        </div>
+    </form>
+</body>
+</html>

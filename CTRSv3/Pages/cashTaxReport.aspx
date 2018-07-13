@@ -1,7 +1,7 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Pages/principal.Master" AutoEventWireup="true" CodeBehind="cashTaxReport.aspx.cs" Inherits="CTRSv3.WebFormCashTaxReport" %>
 <%@ Register assembly="AjaxControlToolkit" namespace="AjaxControlToolkit" tagprefix="ajaxToolkit" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
-    <asp:UpdatePanel ID="UpdatePanel1" runat="server" UpdateMode="Conditional">
+	<asp:UpdatePanel ID="UpdatePanel1" runat="server" UpdateMode="Conditional">
 			<ContentTemplate>
 				<div class="">
 					<div class="page-title">
@@ -35,26 +35,26 @@
 								</div>
 								<div class="x_content">
 								<br />
-								    <div class="form-group">
-									    <label class="control-label col-md-1 left" style="text-align: left;" for="first-name">Region <span class="required">*</span>
-									    </label>
-									    <div class="col-md-3">
-										    <asp:DropDownList ID="ddlRegion" runat="server" class="form-control" AutoPostBack="True" OnSelectedIndexChanged="ddlRegion_SelectedIndexChanged" >
-										    </asp:DropDownList>
-										    &nbsp;</div>
-									    <label class="control-label col-md-1 left" style="text-align: left;" for="last-name">Period Date <span class="required">*</span>
-									    </label>
-									    <div class="col-md-3">
-										    <asp:DropDownList ID="ddlPeriod" runat="server" class="form-control" DataTextFormatString="{0:MM/dd/yyyy}" AutoPostBack="True">
-										    </asp:DropDownList>
-									    </div>
-                                        <label class="control-label col-md-1 left" style="text-align: left;" for="last-name">Template <span class="required">*</span>
-									    </label>
-									    <div class="col-md-3">
-										    <asp:DropDownList ID="ddlTemplate" runat="server" class="form-control" AutoPostBack="True">
-										    </asp:DropDownList>
-									    </div>
-								    </div>
+									<div class="form-group">
+										<label class="control-label col-md-1 left" style="text-align: left;" for="first-name">Region <span class="required">*</span>
+										</label>
+										<div class="col-md-3">
+											<asp:DropDownList ID="ddlRegion" runat="server" class="form-control" AutoPostBack="True" OnSelectedIndexChanged="ddlRegion_SelectedIndexChanged" >
+											</asp:DropDownList>
+											&nbsp;</div>
+										<label class="control-label col-md-1 left" style="text-align: left;" for="last-name">Period Date <span class="required">*</span>
+										</label>
+										<div class="col-md-3">
+											<asp:DropDownList ID="ddlPeriod" runat="server" class="form-control" DataTextFormatString="{0:MM/dd/yyyy}" AutoPostBack="True">
+											</asp:DropDownList>
+										</div>
+										<label class="control-label col-md-1 left" style="text-align: left;" for="last-name">Template <span class="required">*</span>
+										</label>
+										<div class="col-md-3">
+											<asp:DropDownList ID="ddlTemplate" runat="server" class="form-control" AutoPostBack="True">
+											</asp:DropDownList>
+										</div>
+									</div>
 								</div>
 							</div>
 						</div>
@@ -204,7 +204,7 @@
 					
 					
 							  </div>
-								<asp:ListView ID="lvReport" runat="server" DataSourceID="sdsReport">
+								<asp:ListView ID="lvReport" runat="server" DataSourceID="sdsReport" OnItemDataBound="lvReport_ItemDataBound">
 									<EmptyDataTemplate>
 										<table runat="server" class="table table-striped table-bordered dt-responsive nowrap" cellspacing="0" width="100%">
 											<tr>
@@ -243,15 +243,27 @@
 												<td runat="server">
 													<table id="itemPlaceholderContainer" runat="server"  class="table table-striped table-bordered dt-responsive nowrap" cellspacing="0" width="100%">
 														<tr runat="server" style="">
-															<th runat="server">COUNTRY</th>
-															<th runat="server">Reporting_Entity</th>
+															<th runat="server">
+																<asp:Label ID="lblCountry" runat="server" Text="">COUNTRY</asp:Label>
+																<button class="btn btn-default btn-xs fa fa-filter" type="button" data-toggle="modal" data-target="#modalCustomer"></button>
+															</th>
+															<th runat="server">REPORTING ENTITY</th>
 															<th runat="server">ENTITIES</th>
-															<th runat="server">ENTITY_NAME</th>
+															<th runat="server">ENTITY NAME</th>
 															<th runat="server">TEMPLATE</th>
 															<th runat="server">ESS</th>
-															<th runat="server">Submission</th>
+															<th runat="server">SUBMISSION</th>
 														</tr>
 														<tr runat="server" id="itemPlaceholder">
+														</tr>
+														<tr runat="server" style="">
+															<th runat="server" colspan="5">TOTAL</th>
+															<th runat="server">
+																<asp:Label ID="ESSSumLabel" runat="server" Text="" class="pull-right"></asp:Label>
+															</th>
+															<th runat="server">
+																<asp:Label ID="SubmissionSumLabel" runat="server" Text="" class="pull-right"></asp:Label>
+															</th>
 														</tr>
 													</table>
 												</td>
@@ -300,13 +312,23 @@
 									<SelectParameters>
 										<asp:ControlParameter ControlID="ddlRegion" Name="REGION" PropertyName="SelectedValue" Type="String" />
 										<asp:ControlParameter ControlID="ddlPeriod" Name="Period" PropertyName="SelectedValue" Type="DateTime" />
-									    <asp:ControlParameter ControlID="ddlTemplate" Name="Template" PropertyName="SelectedValue" />
+										<asp:ControlParameter ControlID="ddlTemplate" Name="Template" PropertyName="SelectedValue" />
 									</SelectParameters>
 								</asp:SqlDataSource>
 							</div>
 						  </div>
 					</div>
-		
+				</div>
+
+				<div class="modal fade" id="modalCustomer" tabindex="-1" role="dialog" aria-labelledby="modalCustomer">
+				  <div class="modal-dialog modal-lg" role="document">
+					<div class="modal-content" style="left: 46px; top: 319px; width: 150px;">
+					  <div class="page-header">
+						  <h2>Create Accounting Entity</h2>
+						  <h3>Add an Accounting Entity to the system</h3>
+						</div>
+					</div>
+				   </div>
 				</div>
 			</ContentTemplate>
 		</asp:UpdatePanel>
