@@ -141,6 +141,7 @@
     <Content Include="production\images\favicon.ico" />
     <Content Include="production\images\img.jpg" />
     <Content Include="production\images\inbox.png" />
+    <Content Include="production\images\jim2.png" />
     <Content Include="production\images\mastercard.png" />
     <Content Include="production\images\media.jpg" />
     <Content Include="production\images\paypal.png" />

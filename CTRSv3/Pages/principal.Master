@@ -1,4 +1,4 @@
-<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="principal.master.cs" Inherits="CTRSv3.principal" %> 
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="principal.master.cs" Inherits="CTRSv3.principal" %> 
  
 <%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="ajaxToolkit" %> 
  
@@ -69,7 +69,7 @@
       <!-- menu profile quick info --> 
       <div class="profile clearfix"> 
         <div class="profile_pic"> 
-        <img src="../production/images/jim.jpeg" alt="..." class="img-circle profile_img"> 
+        <img src="../production/images/jim2.png" alt="..." class="img-circle profile_img"> 
         </div> 
         <div class="profile_info"> 
         <span>Welcome,</span> 
@@ -96,41 +96,59 @@
           <ul class="nav child_menu"> 
             <li><a >Cash Tax<span class="fa fa-chevron-down"></span></a> 
             <ul class="nav child_menu"> 
-              <li><a>SP Site<span class="fa fa-chevron-down"></span></a> 
-                <ul class="nav child_menu"> 
-                  <li class="sub_menu"> 
-                    <a href="https://xerox.sharepoint.com/teams/tax/Cash%20Taxes%20%20Folders/Forms/AllItems.aspx" target="_blank">Cash Tax</a> 
-                  </li> 
-                  <li class="sub_menu"> 
-                    <a href="https://xerox.sharepoint.com/teams/tax/Cash%20Taxes%20%20Folders/Forms/AllItems.aspx" target="_blank">Discrete</a> 
-                  </li> 
-                  <li class="sub_menu"> 
-                    <a href="https://xerox.sharepoint.com/teams/OTP_DataCollect/SitePages/Home.aspx" target="_blank">OTP</a> 
-                  </li> 
-                  <li class="sub_menu"> 
-                    <a href="https://xerox.sharepoint.com/teams/TPPackage/Shared%20Documents/Forms/AllItems.aspx" target="_blank">TP Package</a> 
-                  </li> 
-                  <li class="sub_menu"> 
-                    <a href="https://xerox.sharepoint.com/teams/TaxLawUpdates/SitePages/Home.aspx" target="_blank">Tax Law Updates</a> 
-                  </li> 
-                </ul> 
-              </li> 
-              <li><a href="cashTaxReport.aspx">Report</a> 
-              </li> 
+                <li class="sub_menu"> 
+                <a href="https://xerox.sharepoint.com/teams/tax/Cash%20Taxes%20%20Folders/Forms/AllItems.aspx" target="_blank">SP Site</a> 
+                </li> 
+                <li><a href="cashTaxReport.aspx">Report</a> 
+                </li> 
             </ul> 
             </li> 
-            <li><a href="form_advanced.html">Discrete</a></li> 
-            <li><a href="form_validation.html">TP Package</a></li> 
-            <li><a href="form_wizards.html">OTP</a></li> 
-            <li><a href="form_upload.html">Tax Law</a></li> 
-            <li><a href="form_buttons.html">BEAT</a></li> 
-            <li><a href="form_buttons.html">OE</a></li> 
-            <li><a href="PageLoader.aspx">Page Loader</a></li> 
+
+            <li><a >Discrete Tax<span class="fa fa-chevron-down"></span></a> 
+            <ul class="nav child_menu"> 
+                <li class="sub_menu"> 
+                <a href="https://xerox.sharepoint.com/teams/tax/Cash%20Taxes%20%20Folders/Forms/AllItems.aspx" target="_blank">SP Site</a> 
+                </li> 
+                <li><a href="cashTaxReport1.aspx">Report</a> 
+                </li> 
+            </ul> 
+            </li> 
+            
+            <li><a >TP Package<span class="fa fa-chevron-down"></span></a> 
+            <ul class="nav child_menu"> 
+                <li class="sub_menu"> 
+                <a href="https://xerox.sharepoint.com/teams/TPPackage/Shared%20Documents/Forms/AllItems.aspx" target="_blank">SP Site</a> 
+                </li> 
+                <li><a href="cashTaxReport2.aspx">Report</a> 
+                </li> 
+            </ul> 
+            </li> 
+
+            <li><a >Tax Law Updates<span class="fa fa-chevron-down"></span></a> 
+            <ul class="nav child_menu"> 
+                <li class="sub_menu"> 
+                <a href="https://xerox.sharepoint.com/teams/TaxLawUpdates/SitePages/Home.aspx" target="_blank">Tax Law Updates</a> 
+                </li> 
+                <li><a href="cashTaxReport3.aspx">Report</a> 
+                </li> 
+            </ul> 
+            </li> 
+
+
+            <li><a >OTP<span class="fa fa-chevron-down"></span></a> 
+            <ul class="nav child_menu"> 
+                <li class="sub_menu"> 
+                <a href="https://xerox.sharepoint.com/teams/OTP_DataCollect/SitePages/Home.aspx" target="_blank">SP Site</a> 
+                </li> 
+                <li><a href="cashTaxReport4.aspx">Report</a> 
+                </li> 
+            </ul> 
+            </li> 
           </ul> 
           </li> 
           <li><a><i class="fa fa-desktop"></i> Maintenance <span class="fa fa-chevron-down"></span></a> 
           <ul class="nav child_menu"> 
-            <li><a href="general_elements.html">XREF</a></li> 
+            <li><a href="XrefTable.aspx">XREF</a></li> 
             <li><a href="media_gallery.html">Accounts</a></li> 
             <li><a href="typography.html">Budget Center</a></li> 
     <%--                      <li><a href="icons.html">Icons</a></li> 
@@ -240,7 +258,7 @@
         <ul class="nav navbar-nav navbar-right"> 
         <li class=""> 
           <a href="javascript:;" class="user-profile dropdown-toggle" data-toggle="dropdown" aria-expanded="false"> 
-          <img src="../production/images/jim.jpeg" alt="">James 
+          <img src="../production/images/jim2.png" alt="">James 
           <span class=" fa fa-angle-down"></span> 
           </a> 
           <ul class="dropdown-menu dropdown-usermenu pull-right"> 
@@ -264,7 +282,7 @@
           <ul id="menu1" class="dropdown-menu list-unstyled msg_list" role="menu"> 
           <li> 
             <a> 
-            <span class="image"><img src="../production/images/jim.jpeg" alt="Profile Image" /></span> 
+            <span class="image"><img src="../production/images/jim2.png" alt="Profile Image" /></span> 
             <span> 
               <span>James D'iorio</span> 
               <span class="time">3 mins ago</span> 
@@ -276,7 +294,7 @@
           </li> 
           <li> 
             <a> 
-            <span class="image"><img src="../production/images/jim.jpeg" alt="Profile Image" /></span> 
+            <span class="image"><img src="../production/images/jim2.png" alt="Profile Image" /></span> 
             <span> 
               <span>James D'iorio</span> 
               <span class="time">3 mins ago</span> 
@@ -288,7 +306,7 @@
           </li> 
           <li> 
             <a> 
-            <span class="image"><img src="../production/images/jim.jpeg" alt="Profile Image" /></span> 
+            <span class="image"><img src="../production/images/jim2.png" alt="Profile Image" /></span> 
             <span> 
               <span>James D'iorio</span> 
               <span class="time">3 mins ago</span> 
@@ -300,7 +318,7 @@
           </li> 
           <li> 
             <a> 
-            <span class="image"><img src="../production/images/jim.jpeg" alt="Profile Image" /></span> 
+            <span class="image"><img src="../production/images/jim2.png" alt="Profile Image" /></span> 
             <span> 
               <span>James D'iorio</span> 
               <span class="time">3 mins ago</span> 
